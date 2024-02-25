@@ -3,10 +3,12 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRoutes from "./routes/user.route.js";
 import authRoutes from "./routes/auth.route.js";
+import cookieParser from 'cookie-parser'
 
 const app = express();
 dotenv.config();
-app.use(express.json()); //allow json to input as backend
+app.use(express.json()); //allow json to input as backend.
+app.use(cookieParser()); //allow you to access cookies from website.
 
 mongoose
   .connect(process.env.MONGO)
