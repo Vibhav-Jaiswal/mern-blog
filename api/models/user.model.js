@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { boolean } from "webidl-conversions";
 
 const userSchema = new mongoose.Schema(
   {
@@ -20,6 +21,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "https://th.bing.com/th/id/OIP.puMo9ITfruXP8iQx9cYcqwHaGJ?w=257&h=213&c=7&r=0&o=5&dpr=1.3&pid=1.7",
     },
+    isAdmin:{
+      type: Boolean,
+      default: false,
+    }
   },
   { timestamps: true }
 );
