@@ -146,7 +146,6 @@ const CommentSection = ({ postId }) => {
           <Textarea
             placeholder="Add a comment..."
             rows="3"
-            cols="60"
             maxLength="200"
             onChange={(e) => setComment(e.target.value)}
             value={comment}
